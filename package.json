@@ -1,0 +1,38 @@
+{
+  "name": "battleroute",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "server": "nodemon server",
+    "migrate": "npx drizzle-kit generate && npx drizzle-kit migrate",
+    "push": "npx drizzle-kit push",
+    "dev": "concurrently --kill-others \"cd client && npm run dev\" \"npm run server\"",
+    "setup": "mernfinity"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@neondatabase/serverless": "^1.0.0",
+    "bcryptjs": "^3.0.2",
+    "cloudinary": "^2.6.1",
+    "concurrently": "^9.1.2",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "datauri": "^4.1.0",
+    "dotenv": "^16.5.0",
+    "drizzle-orm": "^0.43.1",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mernfinity": "^2.0.6",
+    "mongoose": "^8.14.1",
+    "multer": "^2.0.0",
+    "nodemon": "^3.1.10",
+    "pg": "^8.15.6"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.31.1"
+  }
+}
