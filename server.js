@@ -20,6 +20,7 @@ app.use(cookieParser());
 
 app.use("/uploads", express.static(resolve(__dirname, "uploads")));
 
+
 const allowedOrigin = process.env.CLIENT_URL || "http://localhost:5173";
 app.use(
   cors({
@@ -41,12 +42,8 @@ app.use("/api/v1/users", userRoute);
 const publicPath = resolve(__dirname, "public");
 app.use(express.static(publicPath));
 
-console.log("public path: ", publicPath);
-
 app.get("/", (req, res) => {
   const filePath = join(__dirname, "public", "index.html");
-  console.log(filePath);
-
   if (fs.existsSync(filePath)) {
     res.sendFile(filePath);
   } else {
