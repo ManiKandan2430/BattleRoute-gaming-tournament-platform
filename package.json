@@ -8,6 +8,7 @@
     "migrate": "npx drizzle-kit generate && npx drizzle-kit migrate",
     "push": "npx drizzle-kit push",
     "dev": "concurrently --kill-others \"cd client && npm run dev\" \"npm run server\"",
+    "build":"cd client && npm run build",
     "setup": "mernfinity"
   },
   "keywords": [],
