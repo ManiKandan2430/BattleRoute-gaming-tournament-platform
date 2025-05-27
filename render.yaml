@@ -1,0 +1,40 @@
+services:
+  - type: web
+    name: BattleRoute-gaming-tournament-platform
+    env: node
+    plan: free
+    buildCommand: cd client && npm install && npm run build && cd .. && npm install
+    startCommand: npm start
+    autoDeploy: true
+    repo: https://github.com/ManiKandan2430/BattleRoute-gaming-tournament-platform.git
+    branch: main
+    envVars:
+      - key: NODE_ENV
+        value: production
+        generateValue: false
+      - key: PORT
+        value: "3010"
+        generateValue: false
+      - key: JWT_SECRET
+        value: npg_ea3oztQUmc0v
+        generateValue: false
+      - key: JWT_EXPIRES
+        value: 1d
+        generateValue: false
+      - key: CLIENT_URL
+        value: http://localhost:5173
+        generateValue: false
+      - key: POSTGRES_URL
+        value: postgresql://neondb_owner:npg_dme1vzuRSt6a@ep-polished-thunder-a1o3fubs-pooler.ap-southeast-1.aws.neon.tech/neondb?sslmode=require
+        generateValue: false
+      - key: CLOUD_NAME
+        value: dog7mdcfa
+        generateValue: false
+      - key: CLOUD_API_KEY
+        value: "928937461114146"
+        generateValue: false
+      - key: CLOUD_API_SECRET
+        value: uBUPuNqo85DaVUlJGdenJd3ba1c
+        generateValue: false
+    healthCheckPath: /
+    numInstances: 1
