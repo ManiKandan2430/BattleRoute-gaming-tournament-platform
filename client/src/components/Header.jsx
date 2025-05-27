@@ -1,5 +1,4 @@
 import ReactPlayer from "react-player";
-import video from "../assets/videos/header.mp4";
 import { Link } from "react-router-dom";
 import { GiEnergyArrow } from "react-icons/gi";
 import { PiDotDuotone } from "react-icons/pi";
@@ -72,7 +71,7 @@ const Header = () => {
     <header id="hero" className="w-full overflow-hidden">
       <section className="video-header">
         <ReactPlayer
-          url={video}
+          url="https://res.cloudinary.com/dog7mdcfa/video/upload/v1748340216/videoplayback_online-video-cutter.com_1_vt8ghr.mp4"
           playing
           loop
           muted
